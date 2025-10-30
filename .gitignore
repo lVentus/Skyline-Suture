@@ -1,0 +1,81 @@
+# ========== Unity ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+ProjectSettings/Timeline.asset
+
+# Cache
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Lightmaps
+/[Aa]ssets/**/Lightmap-*
+/[Aa]ssets/**/ReflectionProbe-*
+
+# Ignore Unity generated meta and cache
+/[Uu]serSettings/
+*.pidb
+*.booproj
+
+# ========== Visual Studio / VSCode ==========
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.sln.dotSettings
+*.user
+*.csproj.user
+*.opendb
+*.VC.db
+
+# Rider files
+.idea/
+*.sln.iml
+
+# ========== OS ==========
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# ========== Misc ==========
+*.log
+*.obj
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+*.old
+
+# Build / Export
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.ipa
+*.exe
+*.dll
+*.so
+*.dylib
+*.app
+*.framework
+
+# Unity Collaborate
+.collab/
+
+# TextMeshPro auto files
+[Aa]ssets/TextMesh Pro/**/Resources/
+
+# ========== Keep Files ==========
+!Assets/
+!ProjectSettings/
