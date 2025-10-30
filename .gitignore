@@ -33,6 +33,7 @@ ProjectSettings/Timeline.asset
 *.csproj.user
 *.opendb
 *.VC.db
+*.vsconfig 
 
 # Rider files
 .idea/
