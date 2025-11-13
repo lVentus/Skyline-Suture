@@ -506,17 +506,14 @@ public class ParkourController : MonoBehaviour
 
     bool TryEnterWallRun(Vector3 n)
     {
-        // reject floor / steep slopes: wall must be mostly vertical
         float upDot = Mathf.Abs(Vector3.Dot(n, Vector3.up));
         if (upDot > wallMaxUpDot)
             return false;
 
-        // must be moving at least slightly towards the wall
         float toward = -Vector3.Dot(velocity.normalized, n.normalized); // >0 means moving into wall
         if (toward <= 0f)
             return false;
 
-        // use current horizontal velocity (or forward as fallback) as wall tangent seed
         Vector3 horiz = new Vector3(velocity.x, 0f, velocity.z);
         if (horiz.sqrMagnitude < 0.01f)
             horiz = transform.forward;
