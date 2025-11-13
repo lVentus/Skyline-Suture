@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &235697622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235697623}
+  - component: {fileID: 235697625}
+  - component: {fileID: 235697624}
+  m_Layer: 5
+  m_Name: EnergyBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &235697623
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235697622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3731, y: 0.29348, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1970044882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -281, y: -185}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &235697624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235697622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.060453035, g: 0.9858491, b: 0.9609636, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &235697625
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235697622}
+  m_CullTransparentMesh: 1
 --- !u!1 &253659761
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +208,7 @@ GameObject:
   - component: {fileID: 253659763}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,14 +369,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRigController
   target: {fileID: 1384476697}
   cam: {fileID: 330585546}
-  yawSpeed: 180
-  pitchSpeed: 120
-  minPitch: -80
-  maxPitch: 80
-  distance: 6
-  pivotOffset: {x: 0, y: 2, z: 0}
-  alignYawOmega: 540
-  preAlignMaxDuration: 0.2
+  defaultOffset: {x: 0, y: 1.5, z: -4}
+  wallRunOffset: {x: 2.5, y: 1.3, z: -4}
+  transitionTime: 0.25
+  sensitivity: 150
+  pitchLimits: {x: -50, y: 70}
+  yawLerpSpeed: 12
+  pitchLerpSpeed: 12
 --- !u!4 &328009049
 Transform:
   m_ObjectHideFlags: 0
@@ -596,7 +670,7 @@ GameObject:
   - component: {fileID: 462749585}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,7 +781,7 @@ GameObject:
   - component: {fileID: 532686496}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -929,7 +1003,7 @@ GameObject:
   - component: {fileID: 819105062}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1304,7 +1378,7 @@ GameObject:
   - component: {fileID: 1278473628}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1415,7 +1489,7 @@ GameObject:
   - component: {fileID: 1340793757}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1526,7 +1600,7 @@ GameObject:
   - component: {fileID: 1384476694}
   - component: {fileID: 1384476692}
   - component: {fileID: 1384476691}
-  - component: {fileID: 1384476690}
+  - component: {fileID: 1384476698}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1534,22 +1608,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1384476690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384476689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe2ebfaf6b19d648bb99f1b251daea9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PathTracker
-  sampleHz: 30
-  rdpEps: 0.3
-  kLen: 1
-  kAng: 0.3
 --- !u!114 &1384476691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,38 +1623,43 @@ MonoBehaviour:
   cc: {fileID: 1384476692}
   camRig: {fileID: 328009048}
   walkSpeed: 6
-  gravity: -14
-  wallRunGravity: -1
-  wallRunSpeedDecay: 15
   jumpImpulse: 8
-  dashBurstSpeed: 30
-  omega0: 360
-  omegaK: 0.08
-  omegaMin: 20
-  dashPlateauDelay: 0.5
-  dashPlateauRatio: 0.9
-  energyMax: 100
+  allowDoubleJump: 1
+  doubleJumpImpulse: 7
+  gravity: -14
+  steerOmega0: 360
+  steerOmegaK: 0.08
+  steerOmegaMin: 60
+  airFriction: 0
+  dashStickDead: 0.15
+  dashMinSpeed: 0.1
   dashDrainBase: 22
   dashDrainSpeedCoeff: 0.04
-  regenRate: 6
-  wallRegenRate: 10
-  refundRatio: 0.7
+  dashCamFollowMaxDegPerSec: 60
+  energyMax: 100
+  energyRegen: 8
+  wallRunRegen: 12
   minEnergyToDash: 5
   rearmEnergyAfterDeplete: 50
-  minLeaveSurfaceAngle: 10
-  hitStunTime: 1
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  wallStickDist: 1
-  minWallRunSpeed: 0.2
-  wallCornerMaxAngle: 25
-  preAlignProbeDist: 3
-  preAlignMaxWindow: 0.22
-  state: 0
+  burstSpeedBase: 20
   bonusMax: 10
   bonusK: 0.08
   bonusMin: 0
+  wallRunGravity: -4
+  wallRunSpeedDecay: 2
+  minWallRunSpeed: 3
+  wallMaxUpDot: 0.9
+  wallDetectDistance: 1.5
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  wallRunTag: Wallrun
+  minWallRunTimeBeforeDrop: 0.12
+  dashCollisionPadding: 0.1
+  stunTime: 1
+  logStateEachFrame: 0
+  logWallEvents: 1
+  state: 0
 --- !u!143 &1384476692
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1710,12 +1773,24 @@ Transform:
   m_GameObject: {fileID: 1384476689}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7, y: 15.19, z: 66.8}
+  m_LocalPosition: {x: 0.42, y: 15.3, z: 68.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1674159248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384476698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384476689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a768949235bc0244828feb6ade015f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DualSenseGyroDebug
 --- !u!1 &1674159247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1974,7 @@ GameObject:
   - component: {fileID: 1759303808}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,7 +2269,7 @@ GameObject:
   - component: {fileID: 1865655372}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2335,6 +2410,7 @@ MonoBehaviour:
   line1: {fileID: 1033733284}
   line2: {fileID: 1729610093}
   line3: {fileID: 1819536370}
+  energyBar: {fileID: 235697624}
 --- !u!114 &1970044879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2413,6 +2489,7 @@ RectTransform:
   - {fileID: 1033733283}
   - {fileID: 1729610092}
   - {fileID: 1819536369}
+  - {fileID: 235697623}
   m_Father: {fileID: 298883535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2477,7 +2554,7 @@ GameObject:
   - component: {fileID: 2047962905}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Wallrun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
